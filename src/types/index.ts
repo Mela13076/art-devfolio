@@ -15,3 +15,13 @@ export interface Blog {
   slug: string;
   tags?: string[];
 }
+
+export interface BlogLayoutFrontMatter {
+    title: string;
+    date: string;
+    readTime?: string;
+    tags?: string[];
+    author?: string;
+    lastUpdated?: string;
+
+}

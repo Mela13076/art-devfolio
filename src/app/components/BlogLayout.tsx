@@ -1,0 +1,38 @@
+import { BlogLayoutFrontMatter } from "@/types";
+import { formatDate } from "@/utils/formatDate";
+
+
+
+export default function BlogLayout({ data, children }:  {data: BlogLayoutFrontMatter, children: React.ReactNode}) {
+  const { title, date, tags, readTime, author, lastUpdated } = data;
+
+
+  return (
+    <div className="prose dark:prose-invert container max-w-7xl mx-auto px-4 mb-8">
+          <article className="dark:bg-dark/50 rounded-lg shadow-md p-6">
+            <h1 className="text-center pt-12">{title}</h1>
+            <p className="text-gray-400 text-sm mt-2 text-center">
+              Written by <span className="text-gray-200 font-medium">Amelia Treviño</span>
+            </p>
+
+            <div className="flex flex-col  sm:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400 px-10">
+                <p className="text-gray-400 text-sm">
+                  {formatDate(date)}
+                  {lastUpdated && ` • Updated ${formatDate(lastUpdated)}`}
+                  {readTime && ` • ${readTime}`}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                    {tags && tags.map((tag:string)=>(
+                        <span key={tag} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                            {tag}
+                        </span>
+                    ))}
+                </div>   
+            </div>
+            <hr/>
+                    
+            {children}
+          </article>
+        </div>
+  );
+}
