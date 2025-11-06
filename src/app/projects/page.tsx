@@ -1,7 +1,7 @@
 'use client'
 
 import { projects } from '@/contents/projects'
-import { ProjectCard } from '../components/ProjectCard'
+import  ProjectCard  from '../components/ProjectCard'
 import { motion } from 'framer-motion'
 import { staggerContainer } from '@/utils/animations'
 

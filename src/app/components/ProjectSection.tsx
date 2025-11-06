@@ -1,4 +1,4 @@
-import { ProjectCard } from "./ProjectCard";
+import  ProjectCard  from "./ProjectCard";
 import { projects } from '@/contents/projects'
 
 export default function ProjectSection() {
