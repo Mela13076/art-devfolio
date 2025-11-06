@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: 'Schedule Savvy',
     description:
-      'Developed Schedule Savvy, a full-stack task and scheduling web application designed to streamline organization and productivity. Built using the PERN stack (PostgreSQL, Express.js, React.js, Node.js), the app supports dynamic task categorization, calendar integration, and full CRUD functionality for efficient schedule management. On the backend, implemented RESTful APIs and robust data handling with PostgreSQL to ensure reliability and scalability. On the frontend, designed an intuitive React interface with real-time updates and task filtering. Practiced professional GitHub workflows by managing features, milestones, commits, and pull requests, simulating a collaborative full-stack development environment.',
+      'A full-stack task management web app built for seamless scheduling and productivity. Features dynamic task organization, calendar integration, and full CRUD functionality with a PostgreSQL backend and an intuitive React interface. Practiced professional GitHub workflows with milestones, commits, and pull requests.',
     technologies: ['PostgreSQL', 'Express.js', 'React.js', 'Node.js', 'GitHub', 'REST API'],
     githubLink: 'https://github.com/Mela13076/Schedule-Savvy',
     demoLink: 'https://imgur.com/a/schedule-savvy-app-qpgWbBa',

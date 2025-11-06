@@ -48,7 +48,7 @@ export default function Blogs() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                {blog.excerpt}
+                {blog.summary}
               </motion.p>
               
               <motion.div 

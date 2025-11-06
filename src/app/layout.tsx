@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./context/ThemeContext";
+import ThemeProviderWrapper from "./ThemeProviderWrapper"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Lines from "./components/lines";
@@ -31,14 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={`bg-white transition-colors dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider>
+        <ThemeProviderWrapper>
           <Lines />
           <Navbar />
           <main className="min-h-screen pt-24">
             {children}
           </main>
           <Footer />
-        </ThemeProvider>
+        </ThemeProviderWrapper>
       </body>
     </html>
   );

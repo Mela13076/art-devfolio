@@ -48,7 +48,7 @@ export const ProjectCard = ({ title, description, technologies, image, githubLin
 
       {/* Project Description */}
       <motion.p 
-        className="text-gray-600 dark:text-gray-300 mb-4"
+        className="text-gray-600 dark:text-gray-300 mb-4 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}

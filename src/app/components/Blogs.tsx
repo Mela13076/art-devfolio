@@ -45,7 +45,7 @@ export default function Blogs() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                {blog.excerpt}
+                {blog.summary}
               </motion.p>
               <motion.div 
                 className="flex items-center text-sm text-gray-500 dark:text-gray-400 space-x-4"

@@ -20,7 +20,7 @@ It showcases my **projects, experience, and technical skills** as a Full Stack D
 
 ---
 
-## 🧠 About
+## About
 
 This portfolio reflects my journey as a **Software Engineer and Technical Mentor**, highlighting work across:
 
@@ -33,7 +33,7 @@ It includes projects such as a **Secure File Storage System**, **Real-Time Chat 
 
 ---
 
-## ✨ Features
+## Features
 
 * ⚡ Built with **Next.js App Router**
 * 🎨 Responsive UI using **Tailwind CSS**
@@ -44,7 +44,7 @@ It includes projects such as a **Secure File Storage System**, **Real-Time Chat 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frameworks & Libraries:** Next.js, React, TypeScript, Tailwind CSS, Framer Motion
 **Backend / API:** Node.js, Resend (Email API)
@@ -53,13 +53,12 @@ It includes projects such as a **Secure File Storage System**, **Real-Time Chat 
 
 ---
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/art.dev.git
-   cd art.dev
+   git clone https://github.com/Mela13076/art-devfolio.git
    ```
 
 2. **Install dependencies:**
@@ -92,7 +91,7 @@ It includes projects such as a **Secure File Storage System**, **Real-Time Chat 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/
@@ -121,7 +120,7 @@ src/
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This project was **initially inspired by the YouTube tutorial by [Md Al Mamun](https://youtu.be/TCpwcsz97wo?si=DTFYmVawjNEHvoW9)**.
 It has since been **heavily customized and expanded** by **Amelia Trevino (ART.dev)** to include:
@@ -133,7 +132,7 @@ It has since been **heavily customized and expanded** by **Amelia Trevino (ART.d
 ---
 
 
-## 🪪 License
+## License
 
 This project is for **personal and educational use**.
 You are welcome to explore or adapt it for your own learning, with proper credit.

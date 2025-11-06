@@ -48,7 +48,7 @@ export default function Projects() {
                 {project.title}
               </motion.h3>
               <motion.p 
-                className="text-gray-600 dark:text-gray-300 mb-4"
+                className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}

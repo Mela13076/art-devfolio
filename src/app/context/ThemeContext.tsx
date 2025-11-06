@@ -7,55 +7,51 @@ type Theme = "light" | "dark";
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
-  setTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+  // start with undefined so nothing runs on server
+  const [theme, setTheme] = useState<Theme>("light");
+  const [hydrated, setHydrated] = useState(false);
 
-  // Update theme
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-  };
-
-  // Toggle theme
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    console.log(theme);
-  };
-
-  // Initialize theme
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    const initialTheme = savedTheme || systemTheme;
+    // only runs on client
+    const stored =
+      typeof window !== "undefined"
+        ? window.localStorage.getItem("theme")
+        : null;
+    const systemDark =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    setThemeState(initialTheme);
-    document.documentElement.classList.toggle("dark", initialTheme === "dark");
-    setMounted(true);
+    const initial = (stored as Theme) || (systemDark ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", initial === "dark");
+    setTheme(initial);
+    setHydrated(true);
   }, []);
 
-  // Prevent flash of wrong theme
-  if (!mounted) {
-    return null;
-  }
+  const toggleTheme = () => {
+    if (typeof window === "undefined") return;
+    const next = theme === "light" ? "dark" : "light";
+    window.localStorage.setItem("theme", next);
+    document.documentElement.classList.toggle("dark", next === "dark");
+    setTheme(next);
+  };
+
+  if (!hydrated) return null;
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 }
 
-export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
-}
+export const useTheme = () => {
+  const ctx = useContext(ThemeContext);
+  if (!ctx) throw new Error("useTheme must be used within ThemeProvider");
+  return ctx;
+};
