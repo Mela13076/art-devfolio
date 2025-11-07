@@ -7,6 +7,7 @@ export const blogs: Blog[] = [
         date: '2024-03-15',
         readTime: '5 min read',
         slug: 'first-post',
+        tags: ["Next.js", "AWS", "Security"]
       },
       {
         title: 'Mastering TypeScript for React',

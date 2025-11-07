@@ -1,10 +1,8 @@
-import { BlogLayoutFrontMatter } from "@/types";
+import { BlogLayoutProps } from "@/types";
 import { formatDate } from "@/utils/formatDate";
 
-
-
-export default function BlogLayout({ data, children }:  {data: BlogLayoutFrontMatter, children: React.ReactNode}) {
-  const { title, date, tags, readTime, author, lastUpdated } = data;
+export default function BlogLayout({ data, children }:  {data: BlogLayoutProps, children: React.ReactNode}) {
+  const { title, date, tags, readTime, lastUpdated } = data;
 
 
   return (

@@ -16,12 +16,11 @@ export interface Blog {
   tags?: string[];
 }
 
-export interface BlogLayoutFrontMatter {
+export interface BlogLayoutProps {
     title: string;
     date: string;
     readTime?: string;
     tags?: string[];
-    author?: string;
     lastUpdated?: string;
 
 }
