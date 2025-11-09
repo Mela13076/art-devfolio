@@ -2,19 +2,20 @@ import { Blog } from "@/types";
 
 export const blogs: Blog[] = [
     {
-        title: 'Getting Started with Next.js 14',
-        summary: 'Learn about the new features and improvements in Next.js 14.',
-        date: '2024-03-15',
-        readTime: '5 min read',
-        slug: 'first-post',
-        tags: ["Next.js", "AWS", "Security"]
+        title: 'Building a Secure File Storage System',
+        summary: 'A technical deep dive into designing and implementing a cloud-secure encrypted file storage system using AWS KMS, AES encryption, Django, and professional project management workflows.',
+        date: '2025-01-15',
+        readTime: '7 min read',
+        slug: 'secure-file-storage',
+        tags: ["AWS", "Security", "Django", "Cloud Architecture", "Encryption"]
       },
       {
-        title: 'Mastering TypeScript for React',
-        summary: 'A comprehensive guide to using TypeScript with React applications.',
-        date: '2024-03-10',
-        readTime: '8 min read',
-        slug: 'mastering-typescript-for-react',
+        title: 'Building CodeAgent - Concept Check (Part 1): Designing an AI-Powered Quiz Platform',
+        summary: 'A behind-the-scenes look at building CodeAgent — an AI-driven quiz generator for computer science students, exploring the project vision, architecture, early challenges, and lessons learned so far.',
+        date: '2025-11-08',
+        readTime: '8 min read',      
+        slug: 'codeagent-progress-part-1',
+        tags: ["Next.js", "Supabase", "OpenAI", "AI", "Education", "Full-Stack", "Project Journal"]
       },
       {
         title: 'Building Responsive Layouts with Tailwind CSS',

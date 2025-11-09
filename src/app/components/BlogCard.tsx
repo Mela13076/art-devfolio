@@ -12,7 +12,7 @@ export default function BlogCard ({ title, summary, date, readTime, slug, tags }
   return (
     <motion.article
         key={slug}
-        className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-6 border-primary"
+        className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-5 border-primary"
         variants={fadeInUp}
         {...cardHoverSmall}
     >
@@ -26,7 +26,7 @@ export default function BlogCard ({ title, summary, date, readTime, slug, tags }
         </motion.h3>
         </Link>
         <motion.p 
-        className="text-gray-600 dark:text-gray-300 mb-4"
+        className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
