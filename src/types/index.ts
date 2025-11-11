@@ -21,6 +21,7 @@ export interface BlogLayoutProps {
     date: string;
     readTime?: string;
     tags?: string[];
+    slug?: string;
     lastUpdated?: string;
 
 }

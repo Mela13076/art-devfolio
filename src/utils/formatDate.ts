@@ -1,7 +1,8 @@
 
 export function formatDate(dateString: string): string {
     const now = new Date(); 
-    const date = new Date(dateString);
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
     const timeDiff = now.getTime()- date.getTime()
     const dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
 

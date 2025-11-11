@@ -25,7 +25,7 @@ export default function Blogs() {
             initial="initial"
             animate="animate"
           >
-          {blogs.slice(0,3).map((blog, index) => (
+          {blogs.slice(0,2).map((blog, index) => (
             <BlogCard key={index} {...blog} />
           ))}
         </motion.div>
