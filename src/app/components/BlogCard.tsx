@@ -12,7 +12,7 @@ export default function BlogCard ({ title, summary, date, readTime, slug, tags }
   return (
     <motion.article
         key={slug}
-        className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-5 border-primary"
+        className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-5 border-primary flex flex-col justify-evenly"
         variants={fadeInUp}
         {...cardHoverSmall}
     >

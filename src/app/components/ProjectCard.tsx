@@ -12,7 +12,7 @@ export default function ProjectCard ({ title, description, technologies, image, 
   return (
     <motion.article
       key={title}
-      className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-6 border-primary"
+      className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-6 border-primary flex flex-col justify-evenly"
       variants={fadeInUp}
       {...cardHoverSmall}
     >
