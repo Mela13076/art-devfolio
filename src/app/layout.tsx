@@ -5,6 +5,7 @@ import ThemeProviderWrapper from "./ThemeProviderWrapper"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Lines from "./components/lines";
+import ScrollToTop from "./components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <ScrollToTop />
         </ThemeProviderWrapper>
       </body>
     </html>

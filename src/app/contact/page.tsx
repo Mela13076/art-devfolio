@@ -51,7 +51,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="container max-w-7xl mx-auto py-12">
+    <div className="container max-w-7xl mx-auto py-12 px-10">
       <motion.h1 
         className="text-4xl font-bold mb-8 text-center"
         {...fadeInUp}
@@ -126,7 +126,7 @@ export default function Contact() {
         
         {/* Contact Form */}
         <motion.div 
-          className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+          className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md  border-primary border"
           {...slideInRight}
         >
           <motion.form 
