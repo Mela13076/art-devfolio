@@ -48,13 +48,13 @@ export default function About() {
           Skills
         </motion.h2>
         <motion.div 
-          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 "
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
@@ -72,7 +72,7 @@ export default function About() {
           </motion.div>
           
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
@@ -91,7 +91,7 @@ export default function About() {
           </motion.div>
           
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
@@ -105,7 +105,7 @@ export default function About() {
             </ul>
           </motion.div>
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
@@ -119,7 +119,7 @@ export default function About() {
             </ul>
           </motion.div>
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
@@ -149,13 +149,13 @@ export default function About() {
           Experience
         </motion.h2>
         <motion.div 
-          className="max-w-3xl mx-auto space-y-8"
+          className="max-w-3xl mx-auto space-y-8 "
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHoverSmall}
           >
@@ -170,7 +170,7 @@ export default function About() {
           </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHoverSmall}
           >
@@ -185,7 +185,7 @@ export default function About() {
           </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHoverSmall}
           >
@@ -225,7 +225,7 @@ export default function About() {
           animate="animate"
         >
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHoverSmall}
           >
@@ -240,7 +240,7 @@ export default function About() {
             </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHoverSmall}
           >

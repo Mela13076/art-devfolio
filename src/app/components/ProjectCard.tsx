@@ -12,7 +12,7 @@ export default function ProjectCard ({ title, description, technologies, image, 
   return (
     <motion.article
       key={title}
-      className="bg-white dark:bg-dark/95 rounded-lg shadow-md p-6"
+      className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-6 border-primary flex flex-col justify-evenly"
       variants={fadeInUp}
       {...cardHoverSmall}
     >
@@ -31,7 +31,7 @@ export default function ProjectCard ({ title, description, technologies, image, 
 
       {/* Project Title */}
       <motion.h3 
-        className="text-xl font-semibold mb-2 text-primary"
+        className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
         whileHover={{ x: 5 }}
         transition={{ type: "spring", stiffness: 300 }}
       >

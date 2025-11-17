@@ -1,0 +1,150 @@
+---
+title: "Building a Secure File Storage System"
+summary: "A technical deep dive into designing and implementing a cloud-secure encrypted file storage system using AWS KMS, AES encryption, Django, and professional project management workflows."
+date: "2025-01-15"
+readTime: "7 min read"
+slug: "secure-file-storage"
+tags: ["AWS", "Security", "Django", "Cloud Architecture", "Encryption"]
+---
+
+<img src="/posts/cloud-upload.jpg" alt="Secure File Storage Architecture Diagram" className="my-8 rounded-lg shadow-md" />
+
+Storing and sharing files seems simple on the surface, but the moment security enters the picture the requirements become significantly more complex. In late 2024 and early 2025, I worked with one other teammate to build a Secure File Storage System. The goal of the system was to create a place where users could upload and download files securely, while ensuring that all data remained encrypted even if the server, the database, or the cloud storage bucket was compromised.
+
+This project required designing a full end-to-end architecture that integrated encryption, cloud storage, secure key management, authenticated user access, and a structured development workflow. It became one of the most technical and security-focused projects I have completed, and it changed the way I approach backend and cloud development.
+<hr />
+
+## Why Build a Secure File Storage System
+
+Many organizations rely on cloud storage for sensitive information including legal documents, financial statements, contracts, and personal files. However, simply uploading files to a cloud bucket does not guarantee security. Files must be protected from unauthorized access at multiple layers. Without proper encryption and key management, a leaked access token or a compromised server would be enough to expose all user data.
+
+I wanted to explore how to build a system where:
+
+- Files are encrypted before being uploaded to the cloud.  
+- Encryption keys are protected using AWS Key Management Service.  
+- Only authenticated users can access or decrypt their data.  
+- The storage layer alone does not have enough information to reveal file contents.  
+- All decryption events are logged and controlled.  
+
+Working through these requirements helped me understand how real-world secure file systems function.
+<hr />
+
+
+## Technologies Used
+
+I intentionally chose technologies that would push me out of my comfort zone, especially on the backend. I had previously worked extensively with Node and Express, so I used this project as an opportunity to learn Python and Django.
+
+**Backend**
+
+- Django  
+- Django REST Framework  
+- PostgreSQL  
+- Python Cryptography (AES encryption)  
+
+**Frontend**
+
+- React with Vite  
+
+**Cloud and Security**
+
+- AWS S3 for file storage  
+- AWS KMS for key generation and key encryption  
+- AES-256 for file encryption  
+- JWT authentication  
+- IAM roles and enforced least privilege  
+
+This combination allowed me to build a system that handles both encryption and access control in a secure and scalable way.
+<hr />
+## Architecture Overview
+
+<img src="/posts/secure-file-system-arch.png" alt="Secure File Storage Architecture Diagram" className="my-8 rounded-lg shadow-md" />
+
+The core idea was to encrypt files before upload, store them as unreadable encrypted blobs, and decrypt them only when an authenticated user requests access.
+
+### 1. Client-Side Encryption Before Upload
+
+When a user selected a file to upload:
+
+1. A Data Encryption Key was generated using AWS KMS.  
+2. The file was encrypted locally using AES-256.  
+3. The Data Encryption Key itself was encrypted using KMS so it could be safely stored.  
+
+This ensured that even if the S3 bucket was compromised, attackers would only have access to encrypted data without the ability to decrypt it.
+
+### 2. Secure Storage in AWS S3
+
+The system stored two items per file:
+
+- The encrypted file.  
+- The encrypted Data Encryption Key.  
+
+Django stored metadata including file name, owner, size, and timestamp. The raw AES key was never stored unencrypted.
+
+### 3. Secure Decryption Process
+
+When a user downloaded a file:
+
+1. The encrypted file and encrypted key were retrieved from S3.  
+2. AWS KMS decrypted the Data Encryption Key.  
+3. Django used that key to decrypt the file.  
+4. The original file was returned to the user.  
+
+This design ensured that AWS, the server, and the storage provider could not view the contents of any file unless the authenticated user initiated a decryption request.
+<hr />
+## Challenges and What I Learned
+
+### Learning Django from Scratch
+
+Transitioning from Express to Django required understanding a completely different backend structure. Django uses a more opinionated and organized design pattern, including serializers, views, models, and routing. Although it was challenging at first, the learning experience gave me a stronger understanding of structured backend development and Python-based ecosystems.
+
+### Implementing Real Encryption
+
+Before this project, my understanding of security was based around concepts like HTTPS, JWT, and password hashing. Working with AES encryption, key rotation, secure storage, and KMS introduced me to a deeper level of security engineering. I gained experience with how cryptographic operations are used in real applications rather than abstract examples.
+
+### Integrating AWS KMS and S3
+
+AWS is incredibly powerful, but also complex. I learned how to work with:
+
+- IAM policies and restricted access  
+- Bucket permissions  
+- KMS encryption APIs  
+- Python’s Boto3 SDK  
+- Audit logs and CloudTrail  
+
+Combining all of these correctly was key to making the system secure.
+
+### Building a Full End-to-End Workflow
+
+The project required coordinating frontend file handling, backend cryptographic operations, and cloud storage interactions. Every part of the workflow had to be correct for the system to function properly. This improved my ability to design full-stack systems rather than isolated features.
+<hr />
+## Teamwork and Project Management
+
+This project was completed as a team of two. We treated it like a real development environment and used professional project management practices including:
+
+- GitHub branches for feature development  
+- Pull requests and code reviews  
+- Milestones and sprint planning  
+- Issue boards and task assignments  
+- Regular weekly check-ins  
+
+Working collaboratively improved our code quality, helped us identify issues early, and taught us the value of structured communication during development.
+<hr />
+## What I Would Improve
+
+Although the system functioned securely and reliably, there are several enhancements I would implement in the future:
+
+- A refined, more user-friendly UI.  
+- File-sharing permissions similar to Google Drive.  
+- An admin dashboard to monitor usage.  
+- Role-based access control.  
+- Multi-factor authentication.  
+- Improved logging and analytics.  
+
+This project provides a strong foundation that can be extended into a more complete secure storage platform.
+<hr />
+## Final Thoughts
+
+This project taught me how to build secure systems in a practical, hands-on way. I learned new technologies, gained a deeper understanding of encryption, practiced real project management, and strengthened my ability to design full-stack architectures.
+
+Most importantly, this experience changed how I approach security. I now understand that it must be intentionally designed into a system from the beginning, not added on later. This project represents the type of engineering work I enjoy most. It is challenging, meaningful, and requires a thoughtful approach to design.
+
