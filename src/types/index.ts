@@ -4,7 +4,7 @@ export interface Project {
   technologies: string[];
   githubLink?: string;
   demoLink?: string;
-  image: string;
+  image?: string;
 }
 
 export interface Blog {

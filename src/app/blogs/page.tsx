@@ -3,7 +3,7 @@
 import { blogs } from '@/contents/blogs'
 import  BlogCard  from '../components/BlogCard'
 import { motion } from 'framer-motion'
-import { staggerContainer } from '@/utils/animations'
+import { staggerContainer, fadeInUp } from '@/utils/animations'
 
 export default function Blogs() {
   return (
@@ -16,6 +16,19 @@ export default function Blogs() {
       >
         Blog Posts
       </motion.h1>
+
+      <motion.section 
+              className="mb-16"
+              {...fadeInUp}
+            >
+              <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
+                This blog is a space where I document my technical journey — the projects I build, 
+                the challenges I face, and the lessons I learn from teaching others. Whether it’s 
+                cloud architecture, full-stack design, or reflections on mentoring and leadership, 
+                these posts are meant to inspire, educate, and give a behind-the-scenes look at my 
+                work as a developer.
+              </p>
+            </motion.section>
       
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
