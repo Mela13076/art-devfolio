@@ -53,7 +53,7 @@ export default function Contact() {
   return (
     <div className="container max-w-7xl mx-auto py-12 px-10">
       <motion.h1 
-        className="text-4xl font-bold mb-8 text-center"
+        className="text-4xl font-bold mb-8 text-center pb-20"
         {...fadeInUp}
       >
         Contact Me

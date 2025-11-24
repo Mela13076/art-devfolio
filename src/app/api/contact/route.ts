@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>", // you can use a verified domain later
+      from: "Portfolio Contact <art-devfolio@resend.dev>", // you can use a verified domain later
       to: "trevinoamelia25@gmail.com", // your personal email
       subject: `New message from ${name}`,
       html: `

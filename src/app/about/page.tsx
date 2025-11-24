@@ -244,7 +244,7 @@ export default function About() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">Bachelor of Science in Eletrical Engineering</h3>
+            <h3 className="text-xl font-semibold mb-2">Bachelor of Science in Electrical Engineering</h3>
             <p className="text-primary mb-2">Texas A&M University Kingville • 2019 - 2023</p>
              <ul className="text-secondary list-disc list-inside space-y-2">
               <li>Graduated Magna Cum Laude (3.72 GPA) with Minors in Computer Science and Mathematics.</li>
