@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from 'next/image'
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { Blog } from "@/types";
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
+import { fadeInUp, cardHoverSmall } from '@/utils/animations'
 import Link from "next/link";
 
 

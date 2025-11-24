@@ -3,9 +3,8 @@
 import { blogs } from '@/contents/blogs';
 import  BlogCard  from './BlogCard';
 import Link from 'next/link';
-import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
 
 export default function Blogs() {
   return (
