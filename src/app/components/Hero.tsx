@@ -8,7 +8,7 @@ import { fadeInUp, fadeIn, scaleIn } from '@/utils/animations';
 
 export default function Hero() {
   return (
-    <section className="py-28">
+    <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div 
@@ -96,7 +96,7 @@ export default function Hero() {
             >
               <Link
                 href="/contact"
-                className=" inline-block w-full bg-gray-500  md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                className=" inline-block w-full bg-gray-500  md:w-auto hover:text-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 dark:hover:text-white transition-colors"
               >
                 Contact Me
               </Link>

@@ -31,11 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`bg-white transition-colors dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}>
+    <body className={`min-h-screen flex flex-col bg-white transition-colors dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProviderWrapper>
           <Lines />
           <Navbar />
-          <main className="min-h-screen pt-24">
+          <main className="flex-1 pt-24">
             {children}
           </main>
           <Footer />
