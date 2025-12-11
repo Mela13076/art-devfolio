@@ -32,7 +32,7 @@ export default function Projects() {
         animate="animate"
       >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} project ={project} />
         ))}
       </motion.div>
     </div>

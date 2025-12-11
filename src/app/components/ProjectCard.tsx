@@ -5,23 +5,25 @@ import Image from 'next/image'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { Project } from "@/types";
 import { fadeInUp, cardHoverSmall } from '@/utils/animations'
+import Link from "next/link";
 
 
 //export const ProjectCard = ({ title, description, technologies, image, githubLink, demoLink }: Project) => {
-export default function ProjectCard ({ title, description, technologies, image, githubLink, demoLink }: Project) {
+export default function ProjectCard ({ project }: { project: Project }) {
   return (
+    
     <motion.article
-      key={title}
+      key={project.title}
       className="bg-white dark:bg-dark/80 rounded-lg shadow-md p-6 border-primary flex flex-col justify-evenly"
       variants={fadeInUp}
       {...cardHoverSmall}
     >
       {/* Project Image */}
-      {image && (
+      {project.image && (
         <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
           <Image
-            src={image}
-            alt={title}
+            src={project.image}
+            alt={project.title}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -30,14 +32,16 @@ export default function ProjectCard ({ title, description, technologies, image, 
       )}
 
       {/* Project Title */}
-      <motion.h3 
-        className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
-        whileHover={{ x: 5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        
-        {title}
-      </motion.h3>
+      <Link href={`/projects/${project.slug}`}>
+        <motion.h3 
+          className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
+          whileHover={{ x: 5 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          
+          {project.title}
+        </motion.h3>
+      </Link>
 
       {/* Project Description */}
       <motion.p 
@@ -46,7 +50,7 @@ export default function ProjectCard ({ title, description, technologies, image, 
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        {description}
+        {project.description}
       </motion.p>
 
       {/* Project Technologies */}
@@ -56,7 +60,7 @@ export default function ProjectCard ({ title, description, technologies, image, 
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        {technologies.map((tech) => (
+        {project.technologies.map((tech) => (
           <motion.span
             key={tech}
             className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
@@ -75,9 +79,9 @@ export default function ProjectCard ({ title, description, technologies, image, 
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        {githubLink && (
+        {project.githubLink && (
           <motion.a
-            href={githubLink}
+            href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
@@ -88,9 +92,9 @@ export default function ProjectCard ({ title, description, technologies, image, 
             <span>Code</span>
           </motion.a>
         )}
-        {demoLink && (
+        {project.demoLink && (
           <motion.a
-            href={demoLink}
+            href={project.demoLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
