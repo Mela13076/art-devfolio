@@ -27,11 +27,11 @@ export default function About() {
         {...fadeInUp}
       >
         <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
-          I&apos;m a passionate Full Stack Developer and technical mentor passionate 
-          about building secure, scalable web applications and helping others grow in tech. 
-          With experience leading backend teams, developing cloud-based systems, and teaching 
-          programming to students of all ages, I combine engineering expertise with a love 
-          for creating intuitive, impactful learning experiences.
+          I&apos;m a software engineer and programming instructor who builds full-stack web
+          applications and AI-powered learning tools. My experience includes backend API
+          development, cloud migrations, and AI-assisted workflows. At CodePath, I coordinate
+          technical course delivery and work with engineering and operations teams to improve
+          instructional tools. Teaching and mentoring also inform how I design software for learners.
         </p>
       </motion.section>
 
@@ -53,7 +53,22 @@ export default function About() {
           initial="initial"
           animate="animate"
         >
-          <motion.div 
+          <motion.div
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
+            variants={fadeInUp}
+            {...cardHover}
+          >
+            <FaCode className="h-8 w-8 text-primary mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Languages</h3>
+            <ul className="text-secondary space-y-2">
+              <li>JavaScript / TypeScript</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>HTML5 / CSS3</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
             className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
@@ -62,75 +77,75 @@ export default function About() {
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="text-secondary space-y-2">
               <li>React / Next.js</li>
-              <li>TypeScript</li>
               <li>Tailwind CSS</li>
-              <li>HTML5 / CSS3</li>
+              <li>Responsive Web Design</li>
               <li>Redux</li>
               <li>Framer Motion</li>
-              <li>Figma</li>
             </ul>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
             <FaDatabase className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Backend</h3>
+            <h3 className="text-xl font-semibold mb-2">Backend &amp; Databases</h3>
             <ul className="text-secondary space-y-2">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
+              <li>Node.js / Express</li>
               <li>Django</li>
-              <li>RESTful APIs</li>
-              <li>JWT Authentication</li>
-              <li>Socket.IO</li>
+              <li>REST APIs</li>
+              <li>Prisma</li>
+              <li>PostgreSQL / MySQL</li>
+              <li>MongoDB</li>
+              <li>JWT Authentication / Socket.IO</li>
             </ul>
           </motion.div>
-          
-          <motion.div 
-            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
-            variants={fadeInUp}
-            {...cardHover}
-          >
-            <FaCloud className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>
-            <ul className="text-secondary space-y-2">
-              <li>Azure</li>
-              <li>AWS</li>
-              <li>CI/CD Pipeline</li>
-              <li>Cloudinary</li>
-            </ul>
-          </motion.div>
-          <motion.div 
+
+          <motion.div
             className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
             <FaCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">AI/ Data Science & Security</h3>
+            <h3 className="text-xl font-semibold mb-2">AI &amp; Data</h3>
             <ul className="text-secondary space-y-2">
-              <li>Python</li>
-              <li>Pandas/NumPy/Scikit-learn</li>
-              <li>Cybersecurity Fundamentals</li>
-              <li>Data Mining & Analysis</li>
+              <li>Claude API / Gemini API</li>
+              <li>Google Apps Script</li>
+              <li>Structured AI Outputs &amp; Prompt Development</li>
+              <li>Pandas / NumPy / Scikit-learn</li>
+              <li>Data Mining &amp; Analysis</li>
             </ul>
           </motion.div>
-          <motion.div 
+
+          <motion.div
+            className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
+            variants={fadeInUp}
+            {...cardHover}
+          >
+            <FaCloud className="h-8 w-8 text-primary mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Cloud &amp; DevOps</h3>
+            <ul className="text-secondary space-y-2">
+              <li>Azure / AWS</li>
+              <li>Vercel</li>
+              <li>CI/CD Workflows</li>
+              <li>Cloudinary</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
             className="bg-white dark:bg-dark/95 p-6 rounded-lg shadow-md border-primary"
             variants={fadeInUp}
             {...cardHover}
           >
             <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Tools & Collaboration</h3>
+            <h3 className="text-xl font-semibold mb-2">Tools &amp; Collaboration</h3>
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub</li>
-              <li>VS Code</li>
-              <li>Postman</li>
-              <li>Asana/Trello/Notion</li>
-              <li>Agile/Scrum Practices</li>
+              <li>VS Code / Postman</li>
+              <li>Figma</li>
+              <li>Asana / Trello / Notion</li>
+              <li>Agile / Scrum Practices</li>
             </ul>
           </motion.div>
         </motion.div>
@@ -196,7 +211,7 @@ export default function About() {
             {...cardHoverSmall}
           >
             <h3 className="text-xl font-semibold mb-2">Programming Instructor</h3>
-            <p className="text-primary mb-2">CodaKid • 2023 - Present</p>
+            <p className="text-primary mb-2">CodaKid • 2023–Present</p>
             <ul className="text-secondary list-disc list-outside pl-5 space-y-3">
               <li>Teach programming through game-based projects using Python and Pygame, Java and Minecraft modding, Scratch, and web development.</li>
               <li>Guide students through debugging, logical problem-solving, and building their own projects.</li>
@@ -234,8 +249,8 @@ export default function About() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">Masters of Science in Computer Science</h3>
-            <p className="text-primary mb-2">Texas A&M University Kingsville • 2023 - 2025</p>
+            <h3 className="text-xl font-semibold mb-2">Master of Science in Computer Science</h3>
+            <p className="text-primary mb-2">Texas A&amp;M University–Kingsville • 2023–2025</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
               <li>Graduated with a 4.0 GPA and selected as the Commencement Speaker for the College of Engineering Graduate Studies.</li>
               <li>Focused on software engineering, full-stack development, cloud computing, artificial intelligence, data mining, and cybersecurity.</li>
@@ -250,7 +265,7 @@ export default function About() {
             {...cardHoverSmall}
           >
             <h3 className="text-xl font-semibold mb-2">Bachelor of Science in Electrical Engineering</h3>
-            <p className="text-primary mb-2">Texas A&M University Kingsville • 2019 - 2023</p>
+            <p className="text-primary mb-2">Texas A&amp;M University–Kingsville • 2019–2023</p>
              <ul className="text-secondary list-disc list-inside space-y-2">
               <li>Graduated Magna Cum Laude (3.72 GPA) with Minors in Computer Science and Mathematics.</li>
               <li>Developed a strong foundation in programming, software engineering, computer networks, digital systems, and control theory, blending hardware and software expertise.</li>

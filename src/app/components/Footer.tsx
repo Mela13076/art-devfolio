@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="ml-2" title="Amelia R. Treviño – Full Stack Developer">ART.dev</span>
             </Link>
             <p className="text-sm text-secondary mt-2">
-              © {new Date().getFullYear()} ART.dev | Designed and Customized by Amelia R. Trevino
+              © {new Date().getFullYear()} ART.dev | Designed and Customized by Amelia R. Treviño
             </p>
           </div>
           
@@ -38,7 +38,7 @@ export default function Footer() {
               <FaTwitter className="h-6 w-6" />
             </a> */}
             <a
-              href="https://www.linkedin.com/in/mela13076"
+              href="https://www.linkedin.com/in/art13076"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary hover:text-primary transition-colors"

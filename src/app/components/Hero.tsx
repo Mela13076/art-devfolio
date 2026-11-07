@@ -16,7 +16,7 @@ export default function Hero() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <Image src="/profile.png" alt="Amelia R. Trevino" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
+            <Image src="/profile.png" alt="Amelia R. Treviño" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
           </motion.div>
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -28,7 +28,7 @@ export default function Hero() {
               {...fadeIn}
               transition={{ delay: 0.8 }}
             >
-              Amelia R. Trevino
+              Amelia R. Treviño
             </motion.span>
           </motion.h1>
           <motion.p 
@@ -61,7 +61,7 @@ export default function Hero() {
               <FaGithub />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/mela13076"
+              href="https://www.linkedin.com/in/art13076"
               aria-label="Amelia on LinkedIn"
               target="_blank"
               rel="noopener noreferrer"

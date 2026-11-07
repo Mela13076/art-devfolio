@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amelia Treviño | Full-Stack Developer & Software Engineer Portfolio",
+  title: "Amelia R. Treviño | Full-Stack Developer & Software Engineer Portfolio",
   description:
-    "The portfolio of Amelia Treviño — a full-stack developer and computer science graduate passionate about building secure, scalable, and user-focused web applications. Explore projects in Next.js, React, Django, AWS, and more.",
+    "The portfolio of Amelia R. Treviño — a software engineer building full-stack applications and AI-powered learning tools. Explore projects using Next.js, React, TypeScript, and cloud services, alongside experience in backend development and technical education.",
 };
 
 
