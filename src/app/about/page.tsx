@@ -100,7 +100,7 @@ export default function About() {
             <ul className="text-secondary space-y-2">
               <li>Azure</li>
               <li>AWS</li>
-              <li>CI/CD Piplines</li>
+              <li>CI/CD Pipeline</li>
               <li>Cloudinary</li>
             </ul>
           </motion.div>
@@ -159,13 +159,19 @@ export default function About() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">Backend Team Lead • Full Stack Web Development Intern</h3>
-            <p className="text-primary mb-2">GBCS Group • 2024</p>
-            <ul className="text-secondary list-disc list-inside space-y-2">
-              <li>Led a backend team of 10 interns to develop and maintain scalable web APIs using Node.js and Azure.</li>
-              <li>Oversaw backend migration from Firebase to Azure, managing cloud infrastructure and secure data handling.</li>
-              <li>Collaborated with frontend and DevOps teams to ensure seamless integration and optimized deployment pipelines.</li>
-              <li>Implemented role-based authentication, RESTful APIs, and secure file access via Azure Blob Storage.</li>
+            <h3 className="text-xl font-semibold mb-2">Delivery Coordinator</h3>
+            <p className="text-primary mb-2">CodePath • January 2026–Present</p>
+            <ul className="text-secondary list-disc list-outside pl-5 space-y-3">
+              <li>Coordinate technical testing and delivery for AI110 and AI201. For the inaugural AI110 course, identified curriculum issues, documented launch blockers, and implemented operational improvements before rollout to 3,000+ students.</li>
+              <li>Review curriculum and test instructional workflows using AI-assisted analysis. Compared AI-generated grades with human grader outcomes across 2,400+ student submissions to identify failure cases, refine grading prompts, and recommend curriculum changes.</li>
+              <li>Debug AI grading failures, test rubric revisions, and document edge cases. Worked with engineering teams to improve grading workflows across four courses serving 4,788 students.</li>
+              <li>Built an application review pipeline with JavaScript, Google Apps Script, and the Claude API to evaluate Tech Fellow video transcripts and generate scores and feedback for human reviewers. Added error handling and resumable processing; across 500+ applications, processing failures decreased from 50% to 21% across separate pilot rounds.</li>
+            </ul>
+            <h4 className="font-semibold mt-6 mb-2">Earlier roles: Tech Fellow Manager and Tech Fellow</h4>
+            <p className="text-primary mb-4">June 2023–December 2025</p>
+            <ul className="text-secondary list-disc list-outside pl-5 space-y-3">
+              <li>Led and mentored 12 Tech Fellows while providing hands-on debugging support to 350+ students working with HTML, CSS, JavaScript, and React.</li>
+              <li>Worked with staff to improve curriculum delivery, technical support workflows, and student engagement in large virtual programs.</li>
             </ul>
           </motion.div>
 
@@ -174,13 +180,13 @@ export default function About() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">Tech Fellow Manager</h3>
-            <p className="text-primary mb-2">CodePath • 2023 - Present</p>
-            <ul className="text-secondary list-disc list-inside space-y-2">
-              <li>Manage and mentor a team of Tech Fellows (teaching assistants) supporting student learning in computer science courses.</li>
-              <li>Provide direct technical guidance across Web Development, Cybersecurity, and Technical Interview Prep (DSA) programs.</li>
-              <li>Coordinate course delivery, student engagement, and feedback systems to enhance learning outcomes for hundreds of students.</li>
-              <li>Collaborate with the CodePath team to troubleshoot technical issues, design activities, and support scalable curriculum improvements.</li>
+            <h3 className="text-xl font-semibold mb-2">Full-Stack Software Engineer Intern / Backend Team Lead</h3>
+            <p className="text-primary mb-2">GBCS Group • 2024</p>
+            <ul className="text-secondary list-disc list-outside pl-5 space-y-3">
+              <li>Led a backend team modernizing 100+ REST APIs and contributed to the migration from Firebase to Azure using Node.js, Express, Prisma, and MySQL.</li>
+              <li>Designed and implemented REST APIs for internal request-for-proposal (RFP) workflows, document management, and collaboration across departments.</li>
+              <li>Integrated Azure Blob Storage for file management and contributed to React frontend development, UI debugging, API integration testing, and application troubleshooting.</li>
+              <li>Coordinated development priorities, reviewed pull requests, and managed Git branching and CI/CD workflows to support team development and code quality.</li>
             </ul>
           </motion.div>
 
@@ -191,11 +197,10 @@ export default function About() {
           >
             <h3 className="text-xl font-semibold mb-2">Programming Instructor</h3>
             <p className="text-primary mb-2">CodaKid • 2023 - Present</p>
-            <ul className="text-secondary list-disc list-inside space-y-2">
-              <li>Teach students ages 5–16 programming fundamentals and advanced concepts through game-based projects.</li>
-              <li>Instruct in multiple languages and platforms, including Python (Pygame), Java (Minecraft modding), Scratch, and Web Development.</li>
-              <li>Guide over 50 students in developing their logical thinking, debugging, and project-building skills.</li>
-              <li>Adapt lessons to each learner’s pace and foster creativity through interactive coding challenges and personalized instruction.</li>
+            <ul className="text-secondary list-disc list-outside pl-5 space-y-3">
+              <li>Teach programming through game-based projects using Python and Pygame, Java and Minecraft modding, Scratch, and web development.</li>
+              <li>Guide students through debugging, logical problem-solving, and building their own projects.</li>
+              <li>Adapt lessons and coding exercises to each student&apos;s experience and pace.</li>
             </ul>
           </motion.div>
 
@@ -230,7 +235,7 @@ export default function About() {
             {...cardHoverSmall}
           >
             <h3 className="text-xl font-semibold mb-2">Masters of Science in Computer Science</h3>
-            <p className="text-primary mb-2">Texas A&M University Kingville • 2023 - 2025</p>
+            <p className="text-primary mb-2">Texas A&M University Kingsville • 2023 - 2025</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
               <li>Graduated with a 4.0 GPA and selected as the Commencement Speaker for the College of Engineering Graduate Studies.</li>
               <li>Focused on software engineering, full-stack development, cloud computing, artificial intelligence, data mining, and cybersecurity.</li>
@@ -245,7 +250,7 @@ export default function About() {
             {...cardHoverSmall}
           >
             <h3 className="text-xl font-semibold mb-2">Bachelor of Science in Electrical Engineering</h3>
-            <p className="text-primary mb-2">Texas A&M University Kingville • 2019 - 2023</p>
+            <p className="text-primary mb-2">Texas A&M University Kingsville • 2019 - 2023</p>
              <ul className="text-secondary list-disc list-inside space-y-2">
               <li>Graduated Magna Cum Laude (3.72 GPA) with Minors in Computer Science and Mathematics.</li>
               <li>Developed a strong foundation in programming, software engineering, computer networks, digital systems, and control theory, blending hardware and software expertise.</li>
