@@ -16,8 +16,8 @@ export const projects: Project[] = [
       'Developing a custom merchandise showcase for a small business, translating owner requirements into a branded, mobile-friendly website. Built product categories, filtering, pricing displays, and individual product pages with photo galleries using typed TypeScript data and reusable React components. A custom-order inquiry flow is in development.',
     technologies: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS 4'],
     githubLink: 'https://github.com/Mela13076/mdblessings',
-    // demoLink: 'https://devfolio-templete.vercel.app/',
-    // image: '/projects/'
+    demoLink: 'https://mdblessings.vercel.app/',
+    image: '/projects/mdblessings.png'
   },
   {
     title: 'DevFolio',
