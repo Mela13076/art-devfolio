@@ -10,7 +10,7 @@ export default function BlogLayout({ data, children }:  {data: BlogLayoutProps, 
           <article className="dark:bg-dark/80 rounded-lg shadow-md p-6  border-primary border">
             <h1 className="text-center pt-12 text-3xl sm:text-4xl">{title}</h1>
             <p className="text-gray-400 text-sm mt-2 text-center">
-              Written by <span className="text-gray-200 font-medium">Amelia Treviño</span>
+              Written by <span className="text-gray-200 font-medium">Amelia R. Treviño</span>
             </p>
 
             <div className="flex flex-col  sm:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400 px-10">

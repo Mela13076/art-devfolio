@@ -16,7 +16,7 @@ export default function Hero() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <Image src="/profile.png" alt="Profile" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
+            <Image src="/profile.png" alt="Amelia R. Treviño" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
           </motion.div>
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -28,7 +28,7 @@ export default function Hero() {
               {...fadeIn}
               transition={{ delay: 0.8 }}
             >
-              Amelia R. Trevino
+              Amelia R. Treviño
             </motion.span>
           </motion.h1>
           <motion.p 
@@ -36,8 +36,14 @@ export default function Hero() {
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            Software Engineer | Full Stack & Cloud Developer | Empowering the Next Generation of Coders
+            Software Engineer building full-stack applications and AI-powered learning tools.
           </motion.p>
+          <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300 mb-8">
+            I build web applications with React, Next.js, and TypeScript, with experience in
+            backend APIs, cloud services, and AI integration. At CodePath, I support technical
+            course delivery and develop tools for instructional workflows, drawing on my
+            background in teaching and mentoring.
+          </p>
           <motion.div 
             className="flex justify-center space-x-4 mb-8"
             {...fadeInUp}
@@ -45,6 +51,7 @@ export default function Hero() {
           >
             <motion.a
               href="https://github.com/Mela13076"
+              aria-label="Amelia on GitHub"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
@@ -54,7 +61,8 @@ export default function Hero() {
               <FaGithub />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/mela13076"
+              href="https://www.linkedin.com/in/art13076"
+              aria-label="Amelia on LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
@@ -100,6 +108,19 @@ export default function Hero() {
               >
                 Contact Me
               </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a
+                href="/resume/amelia-trevino-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full md:w-auto border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/10 transition-colors"
+              >
+                View Résumé <span className="sr-only">(PDF, opens in a new tab)</span>
+              </a>
             </motion.div>
           </motion.div>
         </div>
