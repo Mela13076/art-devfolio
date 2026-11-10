@@ -12,10 +12,11 @@ export const projects: Project[] = [
     ],
     image: '/projects/learning-loop.png',
     details: {
-      problem: 'Started as CodeAgent, an AI quiz generator for computer science learners. The idea grew into Learning Loop AI to support courses and a broader learning experience.',
-      contribution: 'Built course-based learning features and integrated the Gemini API for tutoring, contextual explanations, hints, and quizzes. Added authentication and PostgreSQL-backed application data.',
-      technicalDecision: 'Used Clerk for authentication and Prisma with PostgreSQL for application data, alongside Gemini-powered learning workflows.',
-      status: 'Deployed on Vercel.',
+      problem:'Originally started as CodeAgent, an AI quiz generator for computer science learners. Through my experience teaching programming, I recognized that students needed more than generated answers. I wanted to create a structured learning experience that encourages understanding, practice, and reflection.',
+      contribution:'Built a full-stack AI learning platform featuring guided tutoring, contextual explanations, hints, dynamically generated quizzes, AI-assisted grading, and study progress tracking. Developed topic-based learning workflows, authenticated user experiences, and persistent learning data.',
+      technicalDecision:'Designed structured AI coaching interactions instead of relying on unrestricted chat, allowing students to request explanations, examples, and hints before seeing answers. Used Gemini for AI-powered learning features, Clerk for authentication, and Prisma with Neon PostgreSQL for type-safe data access and persistent learning progress.',
+      status:'MVP deployed on Vercel. Actively developing improvements to guided learning, progress tracking, and the overall study experience.',
+      blogUrl: '/blogs/why-i-built-learning-loop-ai',
     },
   },
   {
@@ -29,10 +30,10 @@ export const projects: Project[] = [
     ],
     image: '/projects/mdblessings.png',
     details: {
-      problem: 'The business needs a branded place for customers to browse custom merchandise, see starting prices, and explore product examples.',
-      contribution: 'Translated owner requirements into product categories, filtering, pricing displays, and individual product pages with photo galleries.',
-      technicalDecision: 'Used typed TypeScript product data and reusable React components for the catalog, keeping the architecture open to future content management features.',
-      status: 'In development, with a preview on Vercel. The custom-order inquiry flow is not accepting submissions yet.',
+      problem:'A family-owned custom apparel and gift business relied on social media and direct messages to showcase products and coordinate orders. I wanted to create a centralized, mobile-friendly website that made products easier to discover and simplified the custom-order inquiry process.',
+      contribution:'Designed and developed a responsive product showcase with category filtering, individual product pages, image galleries, pricing information, and a custom-order inquiry flow. Organized product information using typed TypeScript data structures and reusable React components for easier maintenance and expansion.',
+      technicalDecision:'Chose Next.js, TypeScript, and Tailwind CSS for a maintainable, responsive application. Prioritized a product catalog and inquiry-based workflow over full e-commerce checkout because orders require individual customization. Used reusable components and structured product data to keep the initial release manageable while supporting future growth.',
+      status:'Initial version deployed on Vercel. Continuing to refine the customer experience and product content, with an admin dashboard planned for future development.',
     },
   },
   {
@@ -46,10 +47,10 @@ export const projects: Project[] = [
     ],
     image: '/projects/devfolio2.png',
     details: {
-      problem: 'Developers need a portfolio they can customize without rewriting the core application components.',
-      contribution: 'Built a portfolio platform with Next.js App Router, React Server Components, MDX, and a reusable theme and configuration system. Published it as a documented GitHub template.',
-      technicalDecision: 'Separated content, configuration, and presentation so site content and appearance can change independently of the core components.',
-      status: 'Published as a GitHub template, with a live demo on Vercel.',
+      problem:'Developer portfolios often require significant code changes to update content, customize styling, or add projects. I wanted to create an open-source portfolio template that developers could easily personalize while maintaining a modern design, strong performance, and a clean codebase.',
+      contribution:'Built and open-sourced a responsive developer portfolio with dynamic project pages, MDX-powered blogs, eight customizable themes, dark and light modes, and a contact form. Developed reusable UI components, centralized configuration, and documentation to help other developers customize the template.',
+      technicalDecision:'Used Next.js App Router with React Server Components and static generation to support performance and content-driven pages. Chose MDX for flexible blog content, typed configuration for maintainable customization, and explicit server/client component boundaries to minimize unnecessary client-side JavaScript.',
+      status:'Completed, open-sourced, and deployed on Vercel. Currently used as the foundation of my personal developer portfolio.',
     },
   },
   {
@@ -62,6 +63,9 @@ export const projects: Project[] = [
       { label: 'Video Demo', url: 'https://drive.google.com/file/d/1VVDslnzRhalw5_raG6APIiKCsulRFbzI/view?usp=sharing' },
     ],
     image: '/projects/securefilesystem.png',
+    details: {
+      blogUrl: '/blogs/secure-file-storage',
+    },
   },
   {
     title: 'Schedule Savvy',

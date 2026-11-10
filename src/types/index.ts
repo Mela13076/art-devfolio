@@ -8,6 +8,7 @@ export interface ProjectDetails {
   contribution?: string;
   technicalDecision?: string;
   status?: string;
+  blogUrl?: string;
 }
 
 export interface Project {
