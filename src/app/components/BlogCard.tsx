@@ -25,7 +25,7 @@ export default function BlogCard ({ title, summary, date, readTime, slug, tags }
         </motion.h3>
         </Link>
         <motion.p 
-        className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2"
+        className="text-gray-600 dark:text-gray-300 mb-4 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}

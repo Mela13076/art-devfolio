@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ExperienceSection />
       <ProjectSection />
+      <ExperienceSection />
       <Blogs />
       {/* <Newsletter /> */}
     </main>

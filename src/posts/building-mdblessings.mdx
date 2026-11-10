@@ -1,0 +1,46 @@
+---
+title: "From Personal Projects to My First Client: Building MDBlessings"
+summary: "What building a product showcase for my mom’s small business taught me about gathering requirements, keeping a project simple, and working with a client."
+date: "2026-11-10"
+readTime: "5 min read"
+slug: "building-mdblessings"
+tags: ["Next.js", "Freelancing", "Small Business", "Project Journal"]
+---
+
+My first client was my mom. She runs **MDBlessings**, a small business where she creates custom designs for shirts, cups, hats, memorial items, and all sorts of other things. I knew she wanted to reach more people, but most customers heard about her through word of mouth or happened to see something she posted on her personal social media. If someone wanted to place an order, they could message or call her.
+
+I'd run into a version of this problem myself. I'd look up a local business, find a Facebook page, and scroll through recent posts trying to figure out everything they offered. Social media made sense for a small business because it was free and easy to start using. But as a customer, I wanted one place where I could see what the business actually did.
+
+My mom never asked me to build her a website. I saw a problem, thought a site could help, and asked her if she'd be interested. I'd wanted to try freelancing for a while, and this was my first chance to take an idea to someone and find out if it would actually help them.
+
+## Figuring Out What She Needed
+
+My mom wanted a place to show her products, a way to point people toward the social accounts she was planning to set up, and an About page where she could tell the story behind MDBlessings. She also wanted to make it easier for people to reach out when they were interested in a custom item.
+
+I started with wireframes and gathered what I'd need to turn them into a site. That meant getting product details, finding out what questions customers asked and how she'd answer them, talking about colors, and asking how she wanted customers to contact her. On a personal project, I can change the layout late at night because I feel like trying something different. Here, the colors, layout, and content all had to feel right for her business.
+
+## How I Kept the First Version Small
+
+I considered adding online payments. But most of my mom's customers were local, and she had limited hours to work on orders. Opening up online purchases could mean dealing with shipping and payment fees on her side and taking on more security work on mine. If she wanted a full online store later, Etsy was an option. What she wanted right away was a site she could send people to, where they could see her work and ask about an order.
+
+I built the site with Next.js, which is what I usually use for web projects, and chose Vercel for hosting. When someone submits a custom order inquiry, Resend emails it to my mom so she can follow up. I had to explain that flow to her in terms of what she and the customer would actually do. Talking through who gets the inquiry and what happens next helped us focus on whether the form would improve the way she already took orders.
+
+I also kept the product catalog in a JSON file, with the images stored in the project. With around 20 products expected, I could keep the catalog in the codebase and avoid setting up a database for it. The trade-off is that a catalog change goes through the project files. For this version, that felt manageable.
+
+The part I found surprisingly hard was keeping the site simple. I'd been working on larger full-stack projects, so it was easy to think of more things I could build. I put that energy into helping customers get around the site. They can filter the products, find similar items from a product page, and go straight to the FAQ, contact page, or custom order form when they have a question.
+
+## What Felt Different About Working With a Client
+
+I had a real deadline. When it's my own project, I can push something back if I don't feel like working on it that day. This time, someone was waiting to use what I was building.
+
+My mom gave me room to figure out the design, and I went through a few iterations to keep it simple and guide people toward the right pages. I also had to get used to talking through changes before making them. I'm used to working alone and making decisions as I go. When a site represents someone else's business, even an idea I'm excited about is something I need to bring up with them first.
+
+One of my favorite moments was showing my mom the first version of the design. I hadn't added the products or business information yet, but she liked how it was set up. I'd spent time thinking about how all those pages should fit together, and it felt great to see her excited about a site she could picture using for her business.
+
+## What I'd Like to Build Next
+
+I'd eventually like to give my mom an admin dashboard where she could add or remove products herself and view and track inquiries in one place. For now, catalog changes happen in the project files and inquiries go to her email. Having worked through the first version, I can see what a dashboard would actually give her. She could make small updates on her own without having to reach out to me each time.
+
+I've also thought about making a reusable template for other small businesses that offer products or services. That's part of what I'd like to explore with ART's Tech Solutions. I want to keep doing this kind of work, and I'd like to see which parts of this project I could reuse while still giving each business room to show what makes it different.
+
+For my mom, I hope the site gives more people a chance to see the range of what she makes and makes it easier for them to ask about ordering something. For me, the best part was getting to build something around what someone else needed. I went into the project wanting to see what the business side of web development was like. I came away wanting to do more of it.

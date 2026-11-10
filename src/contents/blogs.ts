@@ -2,9 +2,17 @@ import { Blog } from "@/types";
 
 export const blogs: Blog[] = [
       {
+        title: "From Personal Projects to My First Client: Building MDBlessings",
+        summary: "What building a product showcase for my mom’s small business taught me about gathering requirements, keeping a project simple, and working with a client.",
+        date: "2026-11-10",
+        readTime: "5 min read",
+        slug: "building-mdblessings",
+        tags: ["Next.js", "Freelancing", "Small Business", "Project Journal"],
+      },
+      {
         title: "Beyond AI-Generated Quizzes: Why I Built Learning Loop AI",
         summary: "How teaching programming inspired me to build Learning Loop AI, what I learned about integrating AI into a full-stack application, and what I’m building next.",
-        date: "2026-11-10",
+        date: "2026-5-18",
         readTime: "7 min read",
         slug: "why-i-built-learning-loop-ai",
         tags: ["Next.js", "Gemini", "AI", "Education", "Full-Stack", "Project Journal"],
