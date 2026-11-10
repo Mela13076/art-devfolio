@@ -2,6 +2,14 @@ import { Blog } from "@/types";
 
 export const blogs: Blog[] = [
       {
+        title: "Beyond AI-Generated Quizzes: Why I Built Learning Loop AI",
+        summary: "How teaching programming inspired me to build Learning Loop AI, what I learned about integrating AI into a full-stack application, and what I’m building next.",
+        date: "2026-11-10",
+        readTime: "7 min read",
+        slug: "why-i-built-learning-loop-ai",
+        tags: ["Next.js", "Gemini", "AI", "Education", "Full-Stack", "Project Journal"],
+      },
+      {
         title: 'Building CodeAgent - Concept Check (Part 1): Designing an AI-Powered Quiz Platform',
         summary: 'A behind-the-scenes look at building CodeAgent — an AI-driven quiz generator for computer science students, exploring the project vision, architecture, early challenges, and lessons learned so far.',
         date: '2025-11-08',

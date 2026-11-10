@@ -1,0 +1,108 @@
+---
+title: "Beyond AI-Generated Quizzes: Why I Built Learning Loop AI"
+summary: "How teaching programming inspired me to build Learning Loop AI, what I learned about integrating AI into a full-stack application, and what I’m building next."
+date: "2026-11-10"
+readTime: "7 min read"
+slug: "why-i-built-learning-loop-ai"
+tags: ["Next.js", "Gemini", "AI", "Education", "Full-Stack", "Project Journal"]
+---
+
+*How my experience teaching programming inspired me to build an AI-powered learning platform, and what developing it taught me about software engineering.*
+
+[Try Learning Loop AI](https://learning-loop-ai-alpha.vercel.app/) · [View the source code](https://github.com/Mela13076/learning-loop-ai)
+
+## An Idea I've Had for Years
+
+For the past several years, I've spent a lot of time helping people learn programming. During college, I worked as a tutor and teaching assistant. Today, I teach kids how to program.
+
+Throughout those experiences, I've noticed something that has stuck with me: understanding a programming concept and knowing how to apply it are two different things. A student might understand what an `if` statement does or how a `for` loop works. But give them a problem and ask them to write the code themselves, and they sometimes don't know where to start.
+
+Usually, we step away from the project for a moment. I'll explain the concept again, walk through a smaller example, and have them break the problem into steps before writing any code. Over time, I've seen how much that combination of guidance, practice, and repetition matters.
+
+My first idea was simple: build an application that generates quizzes with AI so students can practice programming concepts and check what they understand. I called that early project [CodeAgent](/blogs/codeagent-progress-part-1). As I thought more about how my students learn, the idea grew into **Learning Loop AI**.
+
+<hr />
+
+## Why Quizzes Weren't Enough
+
+Quizzes are a great way to check what someone knows, but what happens when they don't know the answer?
+
+I've seen students get stuck on questions they have the knowledge to solve. Sometimes they need a reminder of a concept. Other times, they need a smaller example or someone to ask a question that helps them take the next step. Knowing an answer is wrong doesn't always tell you how to get unstuck.
+
+That's where the idea of a learning loop took shape. I wanted students to be able to learn a concept, practice it, get feedback, and return to the parts they struggled with. The goal is to give learners a way to keep making progress between lessons, when a teacher isn't there to guide every step.
+
+I go through that same process when I'm learning a new technology or practicing piano. There's something motivating about returning to a concept you once struggled with and realizing you can finally use it. I wanted to help learners experience that progress for themselves.
+
+<hr />
+
+## Turning the Idea Into a Working Application
+
+I chose tools I already knew so I could focus on the learning experience and the challenges of integrating AI. I built the application with **Next.js, React, and TypeScript**, using **PostgreSQL and Prisma** to manage learning paths, topics, study sessions, quiz attempts, and user progress. I used **Clerk** for authentication and **Gemini** for the AI features.
+
+The first version includes learning paths, an AI coach, generated quizzes, study timers, notes, and a dashboard with progress tracking and study recommendations. Learners can generate a quiz for a topic they're studying and get feedback explaining why an answer was wrong. Their results also feed into progress tracking.
+
+I wanted learners to finish a quiz with a better idea of what to practice next. The score is useful, but the feedback is what helps them take that next step.
+
+<figure>
+  <img src="/projects/learning-loop.png" alt="Learning Loop AI home page introducing the AI coach, quizzes, study timer, and progress tracking" className="mx-auto rounded-lg" />
+  <figcaption>The Learning Loop AI home page introduces the tools available in the first version.</figcaption>
+</figure>
+
+<figure>
+  <img src="/posts/learningloop-dashboard.png" alt="Learning Loop AI dashboard showing the current learning path, recent quiz scores, and topics to review" width={1317} height={937} loading="lazy" className="mx-auto h-auto max-w-full rounded-lg" />
+  <figcaption>The dashboard shows where I left off, how I did on recent quizzes, and what to review next.</figcaption>
+</figure>
+
+<hr />
+
+## Making AI Useful, Not Just Available
+
+One of the biggest decisions I made was how the AI coach should interact with students. I could have built a chatbot that answers any programming question. But in teaching, I've seen how easy it is to get used to receiving a solution before giving yourself a chance to work through it.
+
+I designed the coach around guided interactions. Learners can ask for an explanation, an example, a hint, or a quiz tied to what they're studying. I want the coach to help them think through a problem in the way an instructor might.
+
+<figure>
+  <img src="/posts/learningloop-topicpage.png" alt="HTML Basics topic page with study tools, mastery progress, and concept choices in the AI Learning Coach" width={684} height={933} loading="lazy" className="mx-auto h-auto max-w-full rounded-lg" />
+  <figcaption>On the HTML Basics page, learners can choose a specific concept to work through with the AI coach.</figcaption>
+</figure>
+
+Building those features taught me that generating content is only part of integrating AI. A generated quiz still needs consistent question structures, valid answers, and predictable grading. The app has to handle malformed responses and failures without losing a learner's work or incorrectly updating their progress.
+
+I separated AI interactions from the rest of the application logic, supported both mock and real AI responses, and added tests around quiz structure and grading. **AI can generate the content, but the application is responsible for validating it and deciding how to use it.**
+
+<hr />
+
+## Thinking Beyond Scores and Study Time
+
+Designing the mastery system was another engineering challenge. At first, measuring progress with quiz scores and study time seemed reasonable. But spending an hour studying doesn't necessarily mean someone understands a topic.
+
+The current system combines quiz performance, repeated practice, study time, and concept coverage. It also requires learners to pass an advanced quiz before a topic can be considered mastered.
+
+It's a starting point. Eventually, I want mastery to reflect whether learners can apply a concept independently, especially when a problem looks different from the examples they've practiced.
+
+<figure>
+  <img src="/posts/learningloop-quizresults.png" alt="HTML Basics quiz results with a score, areas to review, and explanations for individual answers" width={678} height={934} loading="lazy" className="mx-auto h-auto max-w-full rounded-lg" />
+  <figcaption>Quiz results point out which concepts need review and explain why an answer was incorrect.</figcaption>
+</figure>
+
+<hr />
+
+## What I'm Building Next
+
+In the first version, learners can review concepts and follow links to outside resources. I originally thought those resources would encourage them to explore independently. Feedback made me reconsider how much of the learning experience should happen inside the application.
+
+For Version 2, I'm planning built-in modules that explain concepts, demonstrate examples, ask learners to predict outcomes, and give them a chance to practice. I also want to build a Python coding lab so learners can write and test code in the app. More advanced hints and personalized review based on earlier mistakes are also on the roadmap.
+
+I want those features to work together: a learner should be able to study a concept, try it in code, get help when stuck, and revisit it later with a better idea of what to practice.
+
+<hr />
+
+## What This Project Taught Me as a Developer
+
+Learning Loop AI is one of the largest full-stack projects I've built independently. It pushed me to think beyond individual features and pay more attention to architecture, data relationships, testing, and how I would maintain the application as it grew.
+
+It also changed how I use AI during development. I use it to research technologies, think through architectural decisions, and move faster on implementation. I still want to understand why a decision makes sense and what trade-offs I'm accepting.
+
+**AI can build amazing things, but so can I.**
+
+That mindset matters to me both as a developer and as a teacher. I want Learning Loop AI to reflect what I've learned from working with students: good guidance gives them room to think for themselves. I'm proud that I took something I'd seen for years while teaching and built a working application around it. There's plenty more to build, but the goal is still the same: help beginners become more confident and independent problem-solvers.
