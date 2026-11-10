@@ -1,3 +1,15 @@
+export interface ProjectLink {
+  label: 'Live Site' | 'Video Demo' | 'Screenshots' | 'Source Code';
+  url: string;
+}
+
+export interface ProjectDetails {
+  problem?: string;
+  contribution?: string;
+  technicalDecision?: string;
+  status?: string;
+}
+
 export interface Project {
   title: string;
   description: string;
@@ -5,6 +17,8 @@ export interface Project {
   githubLink?: string;
   demoLink?: string;
   image?: string;
+  links?: ProjectLink[];
+  details?: ProjectDetails;
 }
 
 export interface Blog {
